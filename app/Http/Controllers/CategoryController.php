@@ -15,8 +15,6 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        // $categories = Category::get();
-        // return response()->json($categories);
         return view('admin.category.index', compact('categories'));
     }
 
@@ -61,7 +59,7 @@ class CategoryController extends Controller
                 'alert-type'=>'error'
             );
          }
-         
+
          return redirect()->back()->with($notification);
     }
 
